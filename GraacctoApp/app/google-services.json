@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "240417991",
+    "firebase_url": "https://graaccto.firebaseio.com",
+    "project_id": "graaccto",
+    "storage_bucket": "graaccto.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:240417991:android:2dc5da3df7f77ed07652e2",
+        "android_client_info": {
+          "package_name": "br.org.graacc.graaccto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "240417991-cg699ausk1iuif6jh1cdirtsotehgojq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.org.graacc.graaccto",
+            "certificate_hash": "b6ba3635b850e25ebebf18f22212a214ae71c7d2"
+          }
+        },
+        {
+          "client_id": "240417991-s6cpodd5hi6ph0gmi4e0t0bpdae6josp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtdUioRXApvYT2b_vvq5I2PFLkQjdHL3U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "240417991-s6cpodd5hi6ph0gmi4e0t0bpdae6josp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

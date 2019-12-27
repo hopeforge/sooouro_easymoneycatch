@@ -1,0 +1,47 @@
+<mat-card class="login-box container-card">
+
+    <div>
+      <a><h1>Fidelidade</h1></a>
+    </div>
+
+    <div>
+
+      <form #form="ngForm" (ngSubmit)="salvar()" >
+
+        <mat-form-field appearance="outline">
+            <mat-label>Quantidade de Registros</mat-label>
+            <div>
+                <input type="input" matInput name="quantidade" required [(ngModel)] = "configuracao.quantidade">
+            </div>
+        </mat-form-field>
+
+        <br>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Período máximo de Registros</mat-label>
+            <div>
+                <input type="input" matInput name="tempo" required [(ngModel)] = "configuracao.tempo">
+            </div>
+        </mat-form-field>
+
+        <br>
+
+        <section class="example-section">
+            <mat-checkbox class="example-margin" name="fidelidade" *ngIf  [(ngModel)] = "fidelidade">Fidelidade</mat-checkbox>
+        </section>
+
+        <br>
+
+        <div>
+          <div>
+            <button mat-raised-button class="botao" type="submit">Salvar</button>
+
+            <button mat-raised-button class="botao1" type="button" [routerLink] = "['/dashboard']">Voltar</button>
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+
+  </mat-card>

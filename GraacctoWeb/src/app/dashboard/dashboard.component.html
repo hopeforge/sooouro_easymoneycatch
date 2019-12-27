@@ -1,0 +1,100 @@
+<mat-card class="login-box container-card">
+
+      <div>
+        <img class="img_logo" src="assets/images/logo_graaccto_2.png">
+        <div>      
+            <button mat-raised-button class="botao-sair" type="button" [routerLink] = "['/']">Sair</button>
+          </div>
+      </div>
+
+          <table mat-table [dataSource]="listaGrato">
+              <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef>id</th>
+                <td met-cell *matCellDef="let listaGrato">{{ listaGrato.id }}</td>
+              </ng-container>
+
+              <ng-container matColumnDef="parceiro">
+                  <th mat-header-cell *matHeaderCellDef>Parceiro</th>
+                  <td met-cell *matCellDef="let listaGrato">{{listaGrato.nome}}</td>
+              </ng-container>
+
+              <ng-container matColumnDef="grato">
+                  <th mat-header-cell *matHeaderCellDef>Grato</th>
+                  <td met-cell *matCellDef="let listaGrato">{{listaGrato.quantidade}}</td>
+                </ng-container>
+
+                <ng-container matColumnDef="valor">
+                    <th mat-header-cell *matHeaderCellDef><mat-icon> attach_money</mat-icon></th>
+                    <td met-cell *matCellDef="let listaGrato">
+                        <mat-form-field appearance="outline">
+                            <mat-label>ValorR$</mat-label>
+                            <div>
+                                <input type="input" matInput name="valor" id="inputValor" [(ngModel)] = listaGrato.valor>
+                            </div>
+                        </mat-form-field>
+                    </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="botoes">
+                      <th mat-header-cell *matHeaderCellDef></th>
+                      <td mat-cell *matCellDef="let listaGrato" class="mtIcon">
+                        <button mat-button color="primary" (click) = "salvar(listaGrato.id, listaGrato.valor)">Salvar</button>
+                      </td>
+                      </ng-container>
+
+
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr class="hover" mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+            </table>
+
+
+        <div  class="botoes-items">
+
+            <div class="example-button-row botoes">
+                <button [routerLink]="['/configuracao']" title="Configurar" class="botao1" mat-fab aria-label="Example icon-button with a heart icon">
+                  <!-- <mat-icon>favorite</mat-icon> -->
+                  <!-- <mat-icon class="config">link</mat-icon> -->
+                  <img src="assets/images/repeat.png">
+                </button>
+            </div>
+
+            <div class="example-button-row botoes">
+                <button [routerLink]="['/cadastro']" title="Cadastrar" class="botao2" mat-fab aria-label="Example icon-button with a heart icon">
+                  <!-- <mat-icon>favorite</mat-icon> -->
+                  <!-- <mat-icon class="cad">person_add</mat-icon> -->
+                  <img src="assets/images/edit.png">
+                </button>
+            </div>
+
+            <div class="example-button-row botoes">
+                <button [routerLink]="['/extrato']" title="Extrato" class="botao3" mat-fab aria-label="Example icon-button with a heart icon">
+                  <!-- <mat-icon>favorite</mat-icon> -->
+                  <!-- <mat-icon class="mat-icon-size extrato">ballot</mat-icon> -->
+                  <img src="assets/images/file.png">
+                </button>
+            </div>
+
+            <div class="example-button-row botoes">
+                <button class="botao4"  [routerLink]="['/qrcode']" title="Leitor QR-CODE" mat-fab>
+                  <!-- <mat-icon>favorite</mat-icon> -->
+                  <!-- <mat-icon>add_circle_outline</mat-icon> -->
+                  <!-- <mat-icon>control_point</mat-icon> -->
+                  <!-- <mat-icon class="qc">crop_free</mat-icon> -->
+                  <img src="assets/images/smartphone1.png">
+                  <!-- <mat-icon>loupe</mat-icon> -->
+                </button>
+            </div>
+
+            <div class="example-button-row botoes">
+                <button [routerLink]="['/pagamento']" title="Pagamento" class="botao5" mat-fab aria-label="Example icon-button with a heart icon">
+                  <!-- <mat-icon>favorite</mat-icon> -->
+                  <!-- <mat-icon>move_to_inbox</mat-icon> -->
+                  <!-- <mat-icon class="pag">save_alt</mat-icon> -->
+                  <img src="assets/images/exit.png">
+                </button>
+            </div>
+
+        </div>
+
+</mat-card>

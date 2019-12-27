@@ -1,0 +1,39 @@
+<mat-card class="login-box container-card">
+
+    <div>
+      <a><img src="assets/images/logo_graaccto_1.jpg"></a>
+    </div>
+
+    <div>
+      <p style="color: rgb(236, 103, 103);">Faça o login para iniciar sua sessão</p>
+
+      <form #form="ngForm" (ngSubmit)="logar()">
+
+        <mat-form-field appearance="outline">
+            <mat-label>Usuário</mat-label>
+            <div>
+                <input type="input" matInput name="login" id="inputEmail" required [(ngModel)] = "usuario.email">
+            </div>
+        </mat-form-field>
+
+        <br>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Senha</mat-label>
+            <div>
+                <input matInput [type]="hide ? 'password' : 'text'"  name="senha" id="inputPassword" required [(ngModel)] = "usuario.senha">
+                <mat-icon class="pwVisibility" matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+            </div>
+        </mat-form-field>
+
+        <div>
+          <div>
+            <button mat-raised-button class="botao" type="submit">Inicie sua sessão</button>
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+
+  </mat-card>

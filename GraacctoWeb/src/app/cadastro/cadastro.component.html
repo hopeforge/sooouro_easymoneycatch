@@ -1,0 +1,95 @@
+<mat-card class="cadastro-box">
+  <!-- /.box-header -->
+  <!-- form start -->
+
+
+
+  <form #form="ngForm" (ngSubmit)="salvar()" novalidate>
+
+      <div>
+          <a><h1>Cadastro</h1></a>
+      </div>
+
+    <mat-form-field appearance="outline">
+    <mat-label>E-mail</mat-label>
+    <div>
+      <div>
+
+        <div class="col-sm-10">
+          <input matInput type="input"  id="inputEmail" name="email" [(ngModel)]="usuario.email">
+        </div>
+      </div>
+    </div>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="outline">
+    <mat-label>Senha</mat-label>
+    <div>
+      <div>
+        <div>
+          <input matInput [type]="hide ? 'password' : 'text'" id="inputSenha" name="senha" [(ngModel)]="usuario.senha">
+          <mat-icon class="pwVisibility" matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+        </div>
+      </div>
+    </div>
+    </mat-form-field>
+    <br>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Confirme a Senha</mat-label>
+      <div>
+        <div>
+          <div>
+            <input matInput [type]="hide2 ? 'password' : 'text'" id="inputConfSenha" name="confSenha">
+            <mat-icon class="pwVisibility" matSuffix (click)="hide2 = !hide2">{{hide2 ? 'visibility' : 'visibility_off'}}</mat-icon>
+          </div>
+        </div>
+      </div>
+      </mat-form-field>
+      <br>
+    <mat-form-field appearance="outline">
+    <mat-label>Nome</mat-label>
+
+    <div>
+      <div>
+
+        <div class="col-sm-10">
+          <input matInput type="input" id="inputNome" name="nome" [(ngModel)]="usuario.nome">
+        </div>
+      </div>
+    </div>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="outline">
+    <mat-label>CNPJ/CPF</mat-label>
+
+    <div>
+      <div>
+        <div>
+          <input matInput type="input" id="inputDocumento" name="documento" [(ngModel)]="usuario.documento">
+        </div>
+      </div>
+    </div>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="outline">
+      <mat-label>Endereço</mat-label>
+
+      <div>
+        <div>
+          <div>
+            <textarea matInput id="inputEndereco" name="endereco" [(ngModel)]="usuario.endereco"></textarea>
+          </div>
+        </div>
+      </div>
+      </mat-form-field>
+
+    <div>
+      <button type="submit" mat-raised-button class="botao">Salvar</button>
+
+      <button mat-raised-button class="botao1" type="button" [routerLink] = "['/dashboard']">Voltar</button>
+    </div>
+
+    <!-- /.box-footer -->
+  </form>
+</mat-card>

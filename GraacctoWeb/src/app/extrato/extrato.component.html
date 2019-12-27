@@ -1,0 +1,53 @@
+<mat-card class="login-box container-card">
+
+      <div>
+        <img class="img_logo" src="assets/images/logo_graaccto_2.png">
+        <div>
+            <a><h1>Extrato</h1></a>
+        </div>
+      </div>
+        
+
+        <div>
+            <mat-radio-group aria-label="Select an option">
+                <mat-radio-button (click) = "selecao(1)"  value="1">Extrato por GRATO</mat-radio-button>
+                <mat-radio-button (click) = "selecao(2)" value="2">Extrato por DOAÇÃO</mat-radio-button>
+              </mat-radio-group>
+        </div>
+
+        <table mat-table [dataSource]="listaExtrato">
+            <ng-container matColumnDef="id">
+              <th mat-header-cell *matHeaderCellDef>Id</th>
+              <td met-cell *matCellDef="let listaExtrato">{{ listaExtrato.id }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="nome">
+                <th mat-header-cell *matHeaderCellDef>Nome</th>
+                <td met-cell *matCellDef="let listaExtrato">{{listaExtrato.nome}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="quantidade">
+                <th mat-header-cell *matHeaderCellDef>Quantidade</th>
+                <td met-cell *matCellDef="let listaExtrato">{{listaExtrato.quantidade}}</td>
+              </ng-container>
+
+              <ng-container matColumnDef="valor">
+                  <th mat-header-cell *matHeaderCellDef>Valor</th>
+                  <td met-cell *matCellDef="let listaExtrato">{{listaExtrato.valor}}</td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr class="hover" mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+          </table>
+
+          <br>
+          <br>
+          <br>
+          <div>
+              <div>
+                <button mat-raised-button class="botao" type="button" [routerLink] = "['/dashboard']">Voltar</button>
+              </div>
+          </div>
+
+</mat-card>

@@ -1,0 +1,32 @@
+<mat-card class="login-box container-card">
+
+   <div>
+     <a><h1>Pagamentos</h1></a>
+   </div>
+
+  <div class="example-container">
+
+    <br>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Código de Barra</mat-label>
+            <div>
+                <input type="input" matInput name="pagamento" [(ngModel)] = "pagamento.codigoBarra">
+            </div>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput type="number" [(ngModel)] = "pagamento.valor" class="example-right-align">
+      <span matPrefix>Valor $&nbsp;</span>
+      <!--<span matSuffix>.00</span>-->
+    </mat-form-field>
+
+    <div>
+        <div>
+          <button mat-raised-button class="botao" type="submit" [routerLink] = "['/dashboard']">Voltar</button>
+        </div>
+    </div>
+
+  </div>
+
+</mat-card>

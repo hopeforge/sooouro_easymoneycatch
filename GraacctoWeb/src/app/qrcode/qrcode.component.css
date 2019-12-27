@@ -1,0 +1,52 @@
+.example-card {
+  max-width: 400px;
+  margin-left: 50 px;
+  text-align: center;
+}
+
+.example-header-image {
+  /* background-image: url('assets/images/code.png'); */
+  background-size: cover;
+}
+
+.img_logo {
+  margin-top: 10px;
+  margin-left: -25px;
+  width: 210px;
+}
+
+mat-card {
+  margin-top: 80px;
+  position: absolute;
+  text-align: center;
+  margin-left: 525px;
+  width: 300px;
+}
+
+.login-box {
+
+  -webkit-box-shadow: 0px 0px 10px #999; 	
+   -moz-box-shadow: 0px 0px 10px #999; 	
+        box-shadow: 0px 0px 10px #999; 	
+
+filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30); 
+-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)"; 
+zoom: 1;
+}
+
+.login-box .content {
+padding: 10px;
+position: relative; /* Isto protege que o elemento interno fique desfocado */
+background-color: #DDD;
+}
+
+.botao {
+  border-radius: 15px;
+  width: 40%;
+  background: rgb(98, 100, 236);
+  color:rgb(219, 245, 248);
+}
+
+button:hover { 
+background: #FF007A
+}
