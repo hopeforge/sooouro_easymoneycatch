@@ -23,7 +23,7 @@
 		<hibernate-jpa-version>1.0.2.Final</hibernate-jpa-version>
 		<commons-dbcp-version>1.4</commons-dbcp-version>
 		<jackson-version>2.7.4</jackson-version>
-		<spring.security.version>5.2.1.RELEASE</spring.security.version>
+		<spring.security.version>5.2.10.RELEASE</spring.security.version>
 	</properties>
 
     <!-- Override inherited settings -->
